@@ -1,3 +1,8 @@
+/**
+ * Represents an employee
+ * Implements PayCalculator interface.
+ * @author Kriti C0776212
+ */
 public abstract class Employee implements PayCalculator{
     public int employeeId;
     protected String firstName;
@@ -5,6 +10,13 @@ public abstract class Employee implements PayCalculator{
     protected Gender gender;
     protected double pay;
 
+    /**
+     * Initializes an Employee object.
+     * @param employeeId Integer Employee id
+     * @param firstName String first name
+     * @param lastName String last name
+     * @param gender Gender enum
+     */
     public Employee(int employeeId, String firstName, String lastName, Gender gender) {
         this.employeeId = employeeId;
         this.firstName = firstName;
@@ -52,5 +64,9 @@ public abstract class Employee implements PayCalculator{
         this.pay = pay;
     }
 
+    /**
+     * Abstract method to display employee details.
+     * To be implemented by a child class.
+     */
     abstract void displayEmployeeDetails();
 }
